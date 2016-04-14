@@ -7,3 +7,5 @@ How to use:
 first column - target, other columns - features
 - second arg: test.csv - same format as first argument
 - third arg: out.csv - output file for predictions
+
+Data sample: train.csv
