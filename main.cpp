@@ -204,21 +204,20 @@ Data read_data(std::ifstream& input) {
 //    }
     return Data{data_tr, ground_truth};
 }
-//g++ -std=c++0x -o lr main.cpp
 
 int main(int argc, char* argv[]) {
-//    std::string filename_train = argv[1];
-//    std::string filename_test = argv[2];
-    std::string filename_train = "train.csv";
-    std::string filename_test = "train.csv";
-    std::string filename_out = "out.csv";
+    std::string filename_train = argv[1];
+    std::string filename_test = argv[2];
+    std::string filename_out = argv[3];
+    // std::string filename_train = "train.csv";
+    // std::string filename_test = "train.csv";
+    // std::string filename_out = "out.csv";
 
     std::cout << filename_train << "\n";
     std::cout << filename_test << "\n";
     std::cout << filename_out << "\n";
     std::cout << "cin\n";
 
-    // auto dir = std::string("C:\\Users\\viktor\\ClionProjects\\inheritance\\");
     auto dir = std::string("");
 
 //    std::cin >> filename_test;
@@ -246,7 +245,6 @@ int main(int argc, char* argv[]) {
         throw std::runtime_error("No test file at " + filename_test);
     }
 
-//    file.open("C:\\Users\\viktor\\ClionProjects\\inheritance\\train.csv");
 
 
     double learning_rate = 0.1;
