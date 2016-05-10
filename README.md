@@ -1,11 +1,19 @@
 
-Logistic regression in C++
+FTRL in C++
 
-How to use:
-- first arg: train.csv - train file in csv format
+####Compilation:
+g++ -std=c++0x -o lr t.cpp
 
-first column - target, other columns - features
-- second arg: test.csv - same format as first argument
-- third arg: out.csv - output file for predictions
 
-Data sample: train.csv
+####Input file format:
+target,feature1:value1,feature2:value2,...,featureN:valueN
+target in (0,1)
+
+
+####How to use:
+./lr train.vw test.vw out.csv batch_size alpha beta lambda1 lambda2
+
+- example: ./lr train.vw test.vw out.csv 5000000 0.1 1.0 1.0 1.0
+
+####HW1 data converter for testing:
+conv_hw1.py
